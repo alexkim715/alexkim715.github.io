@@ -1,11 +1,62 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../components/Layout.astro";
 ---
+<Layout title="Home">
+  <section class="flex flex-col gap-10">
+    <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
+      <!-- Photo placeholder (we’ll replace with your real image) -->
+      <div class="h-28 w-28 rounded-full bg-zinc-200 shrink-0"></div>
 
-<Layout>
-	<Welcome />
+      <div class="flex-1">
+        <h1 class="text-3xl font-semibold">Alex Doyoon Kim</h1>
+        <p class="mt-2 text-zinc-700">
+          Recent CS graduate with a programming languages research background (OCaml, type systems, proof assistants)
+          and experience building full-stack applications. Currently shipping a set of deployed portfolio projects in web + cloud.
+        </p>
+
+        <div class="mt-4 flex flex-wrap gap-3 text-sm">
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="/resume">Resume</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="/projects">Projects</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="https://github.com/">GitHub</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="https://linkedin.com/">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="grid gap-3">
+      <h2 class="text-xl font-semibold">Highlights</h2>
+      <ul class="grid gap-3 text-zinc-800">
+        <li>
+          <span class="font-medium">Programming Languages Research:</span>
+          Built and extended type inference infrastructure for a research language (Pirouette), implementing unification-based inference in OCaml.
+        </li>
+        <li>
+          <span class="font-medium">Teaching (TA):</span>
+          Supported large courses in Data Structures and Programming Languages (300–350+ students/semester) through recitations, office hours, and grading support.
+        </li>
+        <li>
+          <span class="font-medium">Portfolio Build (in progress):</span>
+          Shipping three industry-focused projects: a deployed CRUD app (auth + Postgres), an AWS deployment project (CI/CD + basic observability), and a PL-focused web tool.
+        </li>
+      </ul>
+    </section>
+
+    <section class="grid gap-3">
+      <h2 class="text-xl font-semibold">Featured (planned)</h2>
+      <div class="grid gap-3">
+        <div class="rounded-xl border p-4">
+          <div class="font-medium">B1 — Full-stack CRUD app (in progress)</div>
+          <div class="text-sm text-zinc-700 mt-1">Auth + Postgres + deployed. Focus: schema/migrations, ownership rules, clean UX.</div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="font-medium">B2 — AWS deployment project (planned)</div>
+          <div class="text-sm text-zinc-700 mt-1">CI/CD + logs + health checks. Focus: operating what I build.</div>
+        </div>
+        <div class="rounded-xl border p-4">
+          <div class="font-medium">B3 — PL tool with a web UI (planned)</div>
+          <div class="text-sm text-zinc-700 mt-1">A small developer tool to visualize/inspect program structure (AST/types/steps).</div>
+        </div>
+      </div>
+    </section>
+  </section>
 </Layout>

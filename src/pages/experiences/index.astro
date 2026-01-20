@@ -1,0 +1,27 @@
+---
+import Layout from "../../components/Layout.astro";
+---
+<Layout title="Experiences">
+  <h1 class="text-3xl font-semibold">Experiences</h1>
+  <p class="mt-2 text-zinc-700">Roles, responsibilities, and outcomes.</p>
+
+  <div class="mt-8 grid gap-6">
+    <section class="rounded-xl border p-4">
+      <h2 class="text-lg font-semibold">Research Assistant</h2>
+      <p class="text-sm text-zinc-600 mt-1">Programming Languages research (Pirouette / AITIA).</p>
+      <ul class="mt-3 list-disc pl-5 text-zinc-800 grid gap-2">
+        <li>Built type inference components in OCaml using unification.</li>
+        <li>Produced posters and research artifacts (screenshots/figures).</li>
+      </ul>
+    </section>
+
+    <section class="rounded-xl border p-4">
+      <h2 class="text-lg font-semibold">Teaching Assistant</h2>
+      <p class="text-sm text-zinc-600 mt-1">CSE 250 (Data Structures), CSE 305 (Programming Languages).</p>
+      <ul class="mt-3 list-disc pl-5 text-zinc-800 grid gap-2">
+        <li>Supported 300–350+ students/semester through recitations and office hours.</li>
+        <li>Helped teach core PL concepts: typing, abstraction, higher-order functions, polymorphism.</li>
+      </ul>
+    </section>
+  </div>
+</Layout>

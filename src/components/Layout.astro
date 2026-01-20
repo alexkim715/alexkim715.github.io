@@ -1,0 +1,22 @@
+---
+import Nav from "./Nav.astro";
+import Footer from "./Footer.astro";
+
+const { title } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title ? `${title} — Alex Kim` : "Alex Kim"}</title>
+  </head>
+  <body class="min-h-screen bg-white text-zinc-900">
+    <div class="mx-auto max-w-4xl px-6">
+      <Nav />
+      <main class="py-8">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
