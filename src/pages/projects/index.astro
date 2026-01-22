@@ -79,13 +79,13 @@ import Layout from "../../components/Layout.astro";
       <!-- LEFT: Poster -->
       <div class="space-y-2">
         <div class="rounded-xl border overflow-hidden">
-          <iframe
-            src="/pir-poster.pdf"
-            title="Pirouette poster"
-            class="w-full h-[820px]"
-          ></iframe>
+          <img
+            src="/pir-poster.png"
+            alt="Pirouette research poster preview"
+            class="w-full rounded-xl border border-zinc-200"
+          />
         </div>
-        <a class="text-sm underline text-zinc-700" href="/pir-poster.pdf" target="_blank" rel="noopener noreferrer">
+        <a class="text-sm underline text-zinc-700" href="/pir-poster.png" target="_blank" rel="noopener noreferrer">
           Open poster
         </a>
       </div>
@@ -97,7 +97,7 @@ import Layout from "../../components/Layout.astro";
           <img
             src="/DOT-gen-example.png"
             alt="DOT-generated AST visualization for a Pirouette snippet"
-            class="w-full max-w-xs mx-auto rounded-lg border border-zinc-200"
+            class="w-full max-w-md mx-auto rounded-lg border border-zinc-200"
             loading="lazy"
           />
           <a class="mt-3 inline-block text-sm underline text-zinc-700" href="/DOT-gen-example.png" target="_blank" rel="noopener noreferrer">
