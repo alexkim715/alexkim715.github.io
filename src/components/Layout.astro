@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Nav from "./Nav.astro";
 import Footer from "./Footer.astro";
 
@@ -10,11 +11,12 @@ const siteLinks = {
   email: "mailto:alex.dy.kim7@gmail.com",
 };
 ---
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{title ? `${title} — Alex Kim` : "Alex Kim"}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} — Alex Doyoon Kim` : "Alex Doyoon Kim"}</title>
   </head>
   <body class="min-h-screen bg-white text-zinc-900">
     <div class="mx-auto max-w-4xl px-6">
