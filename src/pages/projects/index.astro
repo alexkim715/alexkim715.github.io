@@ -1,9 +1,11 @@
 ---
 import Layout from "../../components/Layout.astro";
+import Tag from "../../components/Tag.astro";
+import Tags from "../../components/Tags.astro";
 ---
 <Layout title="Projects">
   <h1 class="text-3xl font-semibold">Projects</h1>
-  <p class="mt-2 text-zinc-700">Featured work and shipped artifacts. (This page will grow.)</p>
+  <p class="mt-2 text-zinc-700">Featured work and shipped artifacts.</p>
 
   <section class="mt-8">
     <h2 class="text-xl font-semibold">Featured projects</h2>
@@ -21,11 +23,11 @@ import Layout from "../../components/Layout.astro";
         <p class="mt-2 text-sm text-zinc-700">
           Auth + Postgres + deployed. Focus: schema/migrations, ownership rules, clean UX.
         </p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs text-zinc-600">
-          <span class="rounded-full border px-2 py-1">React</span>
-          <span class="rounded-full border px-2 py-1">Node</span>
-          <span class="rounded-full border px-2 py-1">Postgres</span>
-        </div>
+        <Tags>
+          <Tag label="React" />
+          <Tag label="Node" />
+          <Tag label="Postgres" />
+        </Tags>
       </div>
 
       <!-- B2 -->
@@ -37,11 +39,11 @@ import Layout from "../../components/Layout.astro";
         <p class="mt-2 text-sm text-zinc-700">
           CI/CD + logs + health checks. Focus: operating what I build.
         </p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs text-zinc-600">
-          <span class="rounded-full border px-2 py-1">AWS</span>
-          <span class="rounded-full border px-2 py-1">CI/CD</span>
-          <span class="rounded-full border px-2 py-1">Monitoring</span>
-        </div>
+        <Tags>
+          <Tag label="AWS" />
+          <Tag label="CI/CD" />
+          <Tag label="Monitoring" />
+        </Tags>
       </div>
 
       <!-- B3 -->
@@ -53,15 +55,110 @@ import Layout from "../../components/Layout.astro";
         <p class="mt-2 text-sm text-zinc-700">
           A small developer tool to visualize/inspect program structure (AST/types/steps).
         </p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs text-zinc-600">
-          <span class="rounded-full border px-2 py-1">OCaml</span>
-          <span class="rounded-full border px-2 py-1">Web UI</span>
-          <span class="rounded-full border px-2 py-1">Tooling</span>
+        <Tags>
+          <Tag label="OCaml" />
+          <Tag label="Web UI" />
+          <Tag label="Tooling" />
+        </Tags>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hackathon -->
+  <h2 class="mt-12 text-xl font-semibold">2025 UB Hackathon Project</h2>
+  <p class="mt-1 text-sm text-zinc-700">
+    A shipped hackathon project: community-driven vending machine map + real-time updates.
+  </p>
+
+  <section class="mt-8 rounded-2xl border p-6">
+    <header class="space-y-1">
+      <h2 class="text-xl font-semibold">VendMe — Community Vending Machine Map</h2>
+      <p class="text-sm text-zinc-700">
+        A progressive web app for the UB community to find vending machines and see what’s stocked, powered by photo uploads, points, and moderation.
+      </p>
+
+      <Tags>
+        <Tag label="Hackathon" />
+        <Tag label="React" />
+        <Tag label="Flask" />
+        <Tag label="MongoDB" />
+        <Tag label="Docker" />
+        <Tag label="PWA" />
+        <Tag label="DigitalOcean" />
+      </Tags>
+    </header>
+
+    <div class="mt-6 grid gap-8 md:grid-cols-2 items-start">
+      <!-- LEFT: visuals -->
+      <div class="space-y-4">
+        <div class="rounded-xl border p-4">
+          <div class="text-sm font-medium mb-3">Project visuals</div>
+
+          <!-- logo -->
+          <img
+            src="/vendme-logo.jpg"
+            alt="VendMe project logo"
+            class="w-full max-w-xs mx-auto rounded-lg border border-zinc-200"
+            loading="lazy"
+          />
+
+          <!-- screenshots -->
+          <div class="mt-4 grid gap-3 sm:grid-cols-2">
+            <img
+              src="/vendme-1.png"
+              alt="VendMe app screenshot 1"
+              class="w-full rounded-lg border border-zinc-200"
+              loading="lazy"
+            />
+            <img
+              src="/vendme-2.png"
+              alt="VendMe app screenshot 2"
+              class="w-full rounded-lg border border-zinc-200"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: story + links -->
+      <div class="space-y-6">
+        <div class="rounded-xl border p-4">
+          <div class="text-sm font-medium mb-3">What it does</div>
+          <ul class="list-disc pl-5 text-sm text-zinc-700 space-y-2">
+            <li>Shows vending machine locations and stocked items with a real-time map.</li>
+            <li>Users upload photos to keep inventory info up to date.</li>
+            <li>Points system incentivizes contributions; reporting/moderation keeps the platform clean.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border p-4">
+          <div class="text-sm font-medium mb-3">How we built it</div>
+          <ul class="list-disc pl-5 text-sm text-zinc-700 space-y-2">
+            <li>React frontend + Flask backend + MongoDB database.</li>
+            <li>Containerized with Docker and deployed (production hosting).</li>
+            <li>Auth rules: browsing is open; contributing actions require login.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border p-4">
+          <div class="text-sm font-medium mb-3">Links</div>
+          <div class="flex flex-wrap gap-3 text-sm text-zinc-700">
+            <a class="underline" href="https://devpost.com/software/vendme" target="_blank" rel="noopener noreferrer">
+              Devpost submission
+            </a>
+            <a class="underline" href="https://ubvend.me" target="_blank" rel="noopener noreferrer">
+              Live site
+            </a>
+            <a class="underline" href="https://github.com" target="_blank" rel="noopener noreferrer">
+              GitHub (update link)
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+
+  <!-- Research -->
   <h2 class="mt-12 text-xl font-semibold">Research case study</h2>
   <p class="mt-1 text-sm text-zinc-700">
     Artifacts from my programming languages research: poster + a compiler verification tool (AST visualisation).
@@ -73,6 +170,16 @@ import Layout from "../../components/Layout.astro";
       <p class="text-sm text-zinc-700">
         Research artifacts from my Pirouette work: a poster overview + an example output from my DOT-based AST generator.
       </p>
+
+      <Tags>
+        <Tag label="OCaml" />
+        <Tag label="Type Inference" />
+        <Tag label="Unification" />
+        <Tag label="Choreographic Programming" />
+        <Tag label="Compiler Tooling" />
+        <Tag label="Graphviz DOT" />
+        <Tag label="PL Research" />
+      </Tags>
     </header>
 
     <div class="mt-6 grid gap-8 md:grid-cols-2 items-start">
