@@ -10,47 +10,47 @@ import Tags from "../../components/Tags.astro";
   <section class="mt-8">
     <h2 class="text-xl font-semibold">Featured projects</h2>
     <p class="mt-1 text-sm text-zinc-700">
-      These are the three portfolio projects I’m building next. As they ship, this section becomes the main “clickable” part of the site.
+      These are the three portfolio projects I’m building next. As they ship, each project will clickable to view.
     </p>
 
     <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <!-- B1 -->
-      <div class="rounded-2xl border p-5">
+      <div class="rounded-2xl border p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
         <div class="flex items-center justify-between gap-3">
-          <h3 class="font-semibold">B1 — Full-stack CRUD app</h3>
-          <span class="text-xs rounded-full border px-2 py-1 text-zinc-600">In progress</span>
+          <h3 class="font-semibold">B1 — Contract Summarizer</h3>
+          <span class="text-xs rounded-full border px-2 py-1 text-amber-700 bg-amber-50 border-amber-200">In progress</span>
         </div>
         <p class="mt-2 text-sm text-zinc-700">
-          Auth + Postgres + deployed. Focus: schema/migrations, ownership rules, clean UX.
+          PDF intake + Anthropic API + FastAPI backend. Focus: prompt design, file handling, structured legal output.
         </p>
         <Tags>
-          <Tag label="React" />
-          <Tag label="Node" />
-          <Tag label="Postgres" />
+          <Tag label="Python" />
+          <Tag label="FastAPI" />
+          <Tag label="Anthropic API" />
         </Tags>
       </div>
 
       <!-- B2 -->
-      <div class="rounded-2xl border p-5">
+      <div class="rounded-2xl border p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
         <div class="flex items-center justify-between gap-3">
-          <h3 class="font-semibold">B2 — AWS deployment project</h3>
-          <span class="text-xs rounded-full border px-2 py-1 text-zinc-600">Planned</span>
+          <h3 class="font-semibold">B2 — Legal RAG App</h3>
+          <span class="text-xs rounded-full border px-2 py-1 text-zinc-500 bg-zinc-50 border-zinc-200">Planned</span>
         </div>
         <p class="mt-2 text-sm text-zinc-700">
-          CI/CD + logs + health checks. Focus: operating what I build.
+          Vector search over legal documents + Q&A interface. Focus: chunking strategy, retrieval accuracy, grounded answers.
         </p>
         <Tags>
-          <Tag label="AWS" />
-          <Tag label="CI/CD" />
-          <Tag label="Monitoring" />
+          <Tag label="Python" />
+          <Tag label="ChromaDB" />
+          <Tag label="LlamaIndex" />
         </Tags>
       </div>
 
       <!-- B3 -->
-      <div class="rounded-2xl border p-5">
+      <div class="rounded-2xl border p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
         <div class="flex items-center justify-between gap-3">
           <h3 class="font-semibold">B3 — PL tool with a web UI</h3>
-          <span class="text-xs rounded-full border px-2 py-1 text-zinc-600">Planned</span>
+          <span class="text-xs rounded-full border px-2 py-1 text-zinc-500 bg-zinc-50 border-zinc-200">Planned</span>
         </div>
         <p class="mt-2 text-sm text-zinc-700">
           A small developer tool to visualize/inspect program structure (AST/types/steps).

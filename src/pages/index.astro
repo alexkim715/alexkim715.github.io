@@ -2,9 +2,8 @@
 import Layout from "../components/Layout.astro";
 ---
 <Layout title="Home">
-  <section class="flex flex-col gap-10">
+  <section class="flex flex-col gap-10 pt-8">
     <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-      <!-- Photo placeholder (we’ll replace with your real image) -->
       <img
         src="/me.jpg"
         alt="Photo of Alex Doyoon Kim"
@@ -17,50 +16,58 @@ import Layout from "../components/Layout.astro";
       <div class="flex-1">
         <h1 class="text-3xl font-semibold">Alex Doyoon Kim</h1>
         <p class="mt-2 text-zinc-700">
-          Recent CS graduate with a programming languages research background (OCaml, type systems, proof assistants)
-          and experience building full-stack applications. Currently shipping a set of deployed portfolio projects in web + cloud.
+          Currently employed as an AI Developer at Rupp Pfalzgraf LLC, Buffalo, NY
+        </p>
+        <p class="mt-2 text-zinc-700">
+          A software engineer with a programming languages research background (OCaml, type systems, proof assistants)
+          , experience building full-stack applications, and developing AI tools and software.
+          Currently shipping a set of deployed portfolio projects in web + cloud.
         </p>
 
         <div class="mt-4 flex flex-wrap gap-3 text-sm">
-          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="/resume">Resume</a>
-          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="/projects">Projects</a>
-          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="https://github.com/alexkim715" target="_blank" rel="noopener noreferrer">GitHub</a>
-		  <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="https://www.linkedin.com/in/alex-dyk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-		  <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50" href="mailto:alex.dy.kim7@gmail.com">Email</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50 hover:border-indigo-400 hover:text-indigo-700 transition-colors" href="/resume">Resume</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50 hover:border-indigo-400 hover:text-indigo-700 transition-colors" href="/projects">Projects</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50 hover:border-indigo-400 hover:text-indigo-700 transition-colors" href="https://github.com/alexkim715" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50 hover:border-indigo-400 hover:text-indigo-700 transition-colors" href="https://www.linkedin.com/in/alex-dyk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="rounded-lg border px-3 py-2 hover:bg-zinc-50 hover:border-indigo-400 hover:text-indigo-700 transition-colors" href="mailto:alex.dy.kim7@gmail.com">Email</a>
         </div>
       </div>
     </div>
 
+    <hr class="border-zinc-100" />
+
     <section class="grid gap-3">
       <h2 class="text-xl font-semibold">Highlights</h2>
       <ul class="grid gap-3 text-zinc-800">
-        <li>
+        <li class="border-l-2 border-indigo-200 pl-3">
           <span class="font-medium">Programming Languages Research:</span>
           Built and extended type inference infrastructure for a research language (Pirouette), implementing unification-based inference in OCaml.
         </li>
-        <li>
+        <li class="border-l-2 border-indigo-200 pl-3">
           <span class="font-medium">Teaching (TA):</span>
           Supported large courses in Data Structures and Programming Languages (300–350+ students/semester) through recitations, office hours, and grading support.
         </li>
-        <li>
+        <li class="border-l-2 border-indigo-200 pl-3">
           <span class="font-medium">Portfolio Build (in progress):</span>
-          Shipping three industry-focused projects: a deployed CRUD app (auth + Postgres), an AWS deployment project (CI/CD + basic observability), and a PL-focused web tool.
+          Shipping three projects: a contract summarizer (Anthropic API + FastAPI), a legal RAG app (ChromaDB + LlamaIndex), and a PL-focused web tool.
         </li>
       </ul>
     </section>
 
+    <hr class="border-zinc-100" />
+
     <section class="grid gap-3">
       <h2 class="text-xl font-semibold">Featured (planned)</h2>
       <div class="grid gap-3">
-        <div class="rounded-xl border p-4">
-          <div class="font-medium">B1 — Full-stack CRUD app (in progress)</div>
-          <div class="text-sm text-zinc-700 mt-1">Auth + Postgres + deployed. Focus: schema/migrations, ownership rules, clean UX.</div>
+        <div class="rounded-xl border p-4 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="font-medium">B1 — Contract Summarizer (in progress)</div>
+          <div class="text-sm text-zinc-700 mt-1">PDF intake + Anthropic API + FastAPI backend. Focus: prompt design, file handling, structured legal output.</div>
         </div>
-        <div class="rounded-xl border p-4">
-          <div class="font-medium">B2 — AWS deployment project (planned)</div>
-          <div class="text-sm text-zinc-700 mt-1">CI/CD + logs + health checks. Focus: operating what I build.</div>
+        <div class="rounded-xl border p-4 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="font-medium">B2 — Legal RAG App (planned)</div>
+          <div class="text-sm text-zinc-700 mt-1">Vector search over legal documents + Q&A interface. Focus: chunking strategy, retrieval accuracy, grounded answers.</div>
         </div>
-        <div class="rounded-xl border p-4">
+        <div class="rounded-xl border p-4 hover:shadow-md hover:-translate-y-0.5 transition-all">
           <div class="font-medium">B3 — PL tool with a web UI (planned)</div>
           <div class="text-sm text-zinc-700 mt-1">A small developer tool to visualize/inspect program structure (AST/types/steps).</div>
         </div>
