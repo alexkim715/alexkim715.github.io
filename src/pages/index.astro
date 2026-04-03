@@ -4,13 +4,15 @@ import Layout from "../components/Layout.astro";
 <Layout title="Home">
   <section class="flex flex-col gap-10 pt-8">
     <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
-      <img
-        src="/me.jpg"
-        alt="Photo of Alex Doyoon Kim"
-        width="176"
-        height="176"
-        class="h-44 w-44 rounded-full object-cover object-top border border-zinc-200 shrink-0"
-      />
+      <div class="h-44 w-44 rounded-full overflow-hidden border border-zinc-200 shrink-0">
+        <img
+          src="/me.jpg"
+          alt="Photo of Alex Doyoon Kim"
+          width="176"
+          height="176"
+          class="h-full w-full object-cover object-bottom scale-240"
+        />
+      </div>
 
 
       <div class="flex-1">
