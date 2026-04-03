@@ -18,7 +18,7 @@ import Tags from "../../components/Tags.astro";
       <div class="rounded-2xl border p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
         <div class="flex items-center justify-between gap-3">
           <h3 class="font-semibold">B1 — Contract Summarizer</h3>
-          <span class="text-xs rounded-full border px-2 py-1 text-amber-700 bg-amber-50 border-amber-200">In progress</span>
+          <span class="text-xs rounded-full border px-2 py-1 text-emerald-800 bg-emerald-100 border-emerald-300">Completed</span>
         </div>
         <p class="mt-2 text-sm text-zinc-700">
           PDF intake + Anthropic API + FastAPI backend. Focus: prompt design, file handling, structured legal output.
@@ -28,13 +28,26 @@ import Tags from "../../components/Tags.astro";
           <Tag label="FastAPI" />
           <Tag label="Anthropic API" />
         </Tags>
+        <div class="mt-3 flex flex-col gap-1">
+          <a
+            href="https://contracts.alexdoyoonkim.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-indigo-600 underline hover:text-indigo-800"
+          >
+            Live site →
+          </a>
+          <p class="text-xs text-zinc-400 italic">
+            Hosted on Render's free tier — may take ~30s to wake up after inactivity.
+          </p>
+        </div>
       </div>
 
       <!-- B2 -->
       <div class="rounded-2xl border p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
         <div class="flex items-center justify-between gap-3">
           <h3 class="font-semibold">B2 — Legal RAG App</h3>
-          <span class="text-xs rounded-full border px-2 py-1 text-zinc-500 bg-zinc-50 border-zinc-200">Planned</span>
+          <span class="text-xs rounded-full border px-2 py-1 text-amber-700 bg-amber-50 border-amber-200">In progress</span>
         </div>
         <p class="mt-2 text-sm text-zinc-700">
           Vector search over legal documents + Q&A interface. Focus: chunking strategy, retrieval accuracy, grounded answers.
